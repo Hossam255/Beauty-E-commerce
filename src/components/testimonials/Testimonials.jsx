@@ -25,7 +25,7 @@ function Testimonials() {
         </div>
 
         <div className={css.reviews}>Reviews</div>
-        <div className={css.carousal}>
+        <div className={css.carousel}>
             <Swiper
             slidesPerView={3}
             slidesPerGroup={1}
@@ -36,7 +36,7 @@ function Testimonials() {
                 TestimonialsData.map((testimonial, i)=>(
                     <SwiperSlide>
                         <div className={css.testimonial}>
-                            <img src={testimonial.img} alt="" />
+                            <img src={testimonial.image} alt="" />
                             <span>{testimonial.comment}</span>
                             <hr />
                             <span>{testimonial.name}</span>
