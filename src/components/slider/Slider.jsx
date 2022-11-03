@@ -11,7 +11,14 @@ import './Slider.css'
 function Slider() {
   return (
     <div className='s-container'>
-        <Swiper className='mySwiper' navigation={true} loopFillGroupWithBlank={true} modules={[Pagination, Navigation]} slidesPerView={3}spaceBetween={40}slidesPerGroup={1}loop={true}>
+        <Swiper breakpoints={{
+            640: {
+                slidesPerView: 3,
+            },
+            0: {
+                slidesPerView: 1
+            }
+        }} className='mySwiper' navigation={true} loopFillGroupWithBlank={true} modules={[Pagination, Navigation]} slidesPerView={3}spaceBetween={40}slidesPerGroup={1}loop={true}>
             {SliderProducts.map((slide, i) =>(
             <SwiperSlide>
                 <div className="left-s">
